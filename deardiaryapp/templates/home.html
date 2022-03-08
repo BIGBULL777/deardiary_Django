@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Diary</title>
+</head>
+<body>
+    <div style="align-items: center;">
+        <center>
+        <h1 style="background-color: aqua;font-style: italic;">Dear Diary</h1>
+        </center>
+    </div>
+    <center>
+        <form method="post" action="#">
+            {% csrf_token %}
+            <b>
+                {{form}}
+            </b>
+            <br>
+            <button>
+                Save Entry
+            </button>
+        </form>
+    </center>
+    <div>
+        <center>
+            {% for i in entry %}
+        <div style="border: 2px solid black; border-radius: 4px; margin: 10px;">
+            <div style="border: 2px green;">
+                <p>
+                    {{i.date}}<br>
+                </p>
+                <p>
+                    {{i}}
+                </p>
+
+            </div>
+            <a href="/update_entry/{{i.id}}" style="text-decoration: none; color: red;">Update Entry</a>
+                <br>
+                <a href="/Delete_entry/{{i.id}}" style="text-decoration: none; color: red;">Delete Entry</a>
+            </div>
+        {% endfor %}
+        </center>
+        
+    </div>
+</body>
+</html>
+{% comment %} {% url 'update_entry' upadte_entry.id %} {% endcomment %}
