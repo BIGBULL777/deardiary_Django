@@ -12,7 +12,7 @@ def index(request):
             form.save()
         return redirect('/')
     context = {'entry':entry,'form':form}
-    return render(request,'home.html',context)
+    return render(request,'homebs.html',context)
 
 def update_entry(request,pk):
     upadte_entry = Diary.objects.get(id = pk)

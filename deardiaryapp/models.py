@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Diary(models.Model):
-    Entry = models.TextField(max_length = 200)
+    Entry = models.TextField()
     date = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
