@@ -43,12 +43,15 @@
                 <a class="nav-link active" aria-current="page" href="home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="accounts/login">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="register">Register</a>
               </li>
-              <li class="nav-item dropdown">
+    </div>
+  </div>
+</div>
+              <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown link
                 </a>
@@ -57,11 +60,19 @@
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
       </nav>
+      <div>
+        <!-- <div style="border: solid black 2px; margin-top: 25px;width: 300px;">
+          <h3 id="abc">WELCOME</h3>
+          {% if request.user.is_authenticated %}
+          <p style="font-style: italic; font-size: x-large; color: blue;">{{request.user}}</p>
+          <a href="/accounts/logout" style="text-decoration: none; width: 40px;" name="LOGOUT"> Click hear to Logout</a>
+          {% endif %}
+      </div> -->
     <!-- <----------------------------------------------------------------------------------------------------------------------->
     <center>
         <form method="post" action="#" style="width: 60%;">
