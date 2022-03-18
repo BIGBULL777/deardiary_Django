@@ -12,16 +12,18 @@
     {% if next %}
     <p>Hey, you can't access that page.</p>
     {% endif %}
-
+<center>
+    <h3>LOGIN HEAR!!!!!</h3>
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
-
+        
         <p>Username: {{ form.username }}</p>
         <p>Password: {{ form.password }}</p>
-
+        
         <p><input type="submit" = value="login"></p>
         <input type="hidden" name="next" value="{{ next }}">
     </form>
-
+</center>
+    
 </body>
 </html>

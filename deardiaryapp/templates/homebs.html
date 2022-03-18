@@ -30,10 +30,12 @@
 </head>
 
 <body>
+  <marquee behavior="" direction="" style="font-size: xx-large; color: white; background-color: black; border-radius: 5px; font-style: italic;"  >DEAR DIARY</marquee>
+  <center>
     <!-- ? NAVBAR --------------------------------------------------------------------------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">DEAR DIARY</a>
+          <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -66,19 +68,22 @@
         </div>
       </nav>
       <div>
-        <!-- <div style="border: solid black 2px; margin-top: 25px;width: 300px;">
+      </center>
+      <center>
+
+        <div style="border: solid black 2px; margin-top: 25px;border-radius: 10px;">
           <h3 id="abc">WELCOME</h3>
           {% if request.user.is_authenticated %}
-          <p style="font-style: italic; font-size: x-large; color: blue;">{{request.user}}</p>
+          <p style="font-style: italic; font-size: x-large; color: black; font-style: italic;">{{request.user}}</p>
           <a href="/accounts/logout" style="text-decoration: none; width: 40px;" name="LOGOUT"> Click hear to Logout</a>
           {% endif %}
-      </div> -->
-    <!-- <----------------------------------------------------------------------------------------------------------------------->
+        </div> 
+      </center>
     <center>
-        <form method="post" action="#" style="width: 60%;">
+        <form method="post" action="#" style="width: 60%; margin-top: 10px;" class="form-label">
             {% csrf_token %}
             <b>
-                {{form}}
+                Your Feelings:{{form.Entry}}
             </b>
             <br>
             <button>
