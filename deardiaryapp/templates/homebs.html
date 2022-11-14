@@ -26,6 +26,10 @@
       margin-bottom: 10px;
 
     }
+    body{
+      background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,182,213,1) 13%, rgba(96,53,64,1) 100%);
+    }
     </style>
 </head>
 
@@ -71,7 +75,7 @@
       </center>
       <center>
 
-        <div style="border: solid black 2px; margin-top: 25px;border-radius: 10px;">
+        <div style=" margin-top: 25px;border-radius: 10px;">
           <h3 id="abc">WELCOME</h3>
           {% if request.user.is_authenticated %}
           <p style="font-style: italic; font-size: x-large; color: black; font-style: italic;">{{request.user}}</p>
